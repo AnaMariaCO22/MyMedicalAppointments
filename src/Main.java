@@ -23,12 +23,16 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(),"10am");
         myDoctor.addAvailableAppointment(new Date(),"11am");
 
-        System.out.println(myDoctor.getAA());
+
+        Patient paciente = new Patient("Alejandra","ana@gmail");
+        System.out.println(paciente);
+
+        System.out.println(myDoctor);
+        /*
+           System.out.println(myDoctor.getAA());
         for (Doctor.AvailableAppointment aa: myDoctor.getAA()){
             System.out.println(aa.getDate() + " "+aa.getTime());
         }
-        /*
-        Patient paciente = new Patient("Alejandra","ana@gmail");
         Patient paciente2 = new Patient("Ana Maria", "maria@gmail");
         System.out.println(paciente.getName());
         System.out.println(paciente2.getName());
@@ -46,6 +50,8 @@ public class Main {
 
         paciente.setPhoneNumber("46547809");
         System.out.println(paciente.getPhoneNumber()); */
+
+
 
     }
 

@@ -3,32 +3,41 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Doctor {
-    static int id;//Autoincrement
-    private String name;
+public class Doctor extends User{
+
+    Doctor(String name, String email){
+        super(name,email);
+        this.speciality=speciality;
+
+    }
+    //Atributo
+
     private String speciality;
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
+    public ArrayList<AvailableAppointment> getaA() {
+        return aA;
+    }
+
+    public void setaA(ArrayList<AvailableAppointment> aA) {
+        this.aA = aA;
+    }
 
 
-   Doctor(){
-
-       System.out.println("Construyendo el objeto Doctor");
-
-   }
-   Doctor(String name,String specieciality){
-        this.name=name;
-        this.speciality=specieciality;
-       System.out.println("El nombre de doctor asignado es:");
-       id++;
-
-   }
     //comportamientos
 
     public void showName(){
 
-       System.out.println(name);
+       System.out.println(super.getName());
     }
     public void showId(){
-        System.out.println("ID Doctor es: "+id);
+        System.out.println("ID Doctor es: "+super.getId());
     }
 
     ArrayList<AvailableAppointment> aA =new ArrayList<>();
@@ -38,6 +47,12 @@ public class Doctor {
     public ArrayList<AvailableAppointment> getAA(){
        return aA;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Specietity: "+speciality+". Available: "+aA.toString();
+    }
+
     public static class AvailableAppointment{
        private int id;
        private Date date;
@@ -71,5 +86,10 @@ public class Doctor {
            this.date=date;
            this.time=time;
        }
+
+        @Override
+        public String toString() {
+            return "Available Appontments Date: "+date+". Time: "+time;
+        }
     }
 }
