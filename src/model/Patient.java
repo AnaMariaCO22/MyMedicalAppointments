@@ -1,9 +1,11 @@
-public class Patient extends User{
+package model;
+
+public class Patient extends User {
     private String birthday;
     private double weight;
     private double height;
     String blood;
-    Patient(String name, String email){
+    public Patient(String name, String email){
         super(name,email);
     }
 

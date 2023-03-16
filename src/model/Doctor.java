@@ -1,11 +1,11 @@
-import javax.xml.crypto.Data;
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Scanner;
 
-public class Doctor extends User{
+public class Doctor extends User {
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name,email);
         this.speciality=speciality;
 
@@ -37,7 +37,7 @@ public class Doctor extends User{
        System.out.println(super.getName());
     }
     public void showId(){
-        System.out.println("ID Doctor es: "+super.getId());
+        System.out.println("ID model.Doctor es: "+super.getId());
     }
 
     ArrayList<AvailableAppointment> aA =new ArrayList<>();
