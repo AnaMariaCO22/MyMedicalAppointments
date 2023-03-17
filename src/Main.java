@@ -1,5 +1,4 @@
-import model.Doctor;
-import model.Patient;
+import model.*;
 
 import java.util.Date;
 
@@ -18,15 +17,37 @@ public class Main {
         */
         //showMenu();
         Doctor myDoctor = new Doctor("Ana Maria", "Cardiologa");
-        myDoctor.addAvailableAppointment(new Date(),"4pm");
-        myDoctor.addAvailableAppointment(new Date(),"10am");
-        myDoctor.addAvailableAppointment(new Date(),"11am");
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "11am");
 
 
-        Patient paciente = new Patient("Alejandra","ana@gmail");
+        Patient paciente = new Patient("Alejandra", "ana@gmail");
         System.out.println(paciente);
 
         System.out.println(myDoctor);
+
+        User user = new Patient("Ana Maria", "anamaria.com");
+        user.showDataUser();
+
+        User user1 = new User("ana", "ana@maria.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor");
+                System.out.println("Hospital cruz verde");
+                System.out.println("Departamente: geriatría");
+
+            }
+        };
+        user1.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
+        ISchedulable sch = new AppointmentDoctor();
         /*
            System.out.println(myDoctor.getAA());
         for (model.Doctor.AvailableAppointment aa: myDoctor.getAA()){
@@ -49,7 +70,6 @@ public class Main {
 
         paciente.setPhoneNumber("46547809");
         System.out.println(paciente.getPhoneNumber()); */
-
 
 
     }
