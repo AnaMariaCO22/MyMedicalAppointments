@@ -114,6 +114,7 @@ public class UIMenu {
                     //Obtener el usuario loggueado, para esto crea la variable static
                     patientLogued = p; //A el usuario static le pongo los datos de usuario encontrado
                     //showDoctorMenu
+                    UIPatientMenu.showPatientMenu();
                 }
             }
         }while (!emailCorrect ); //si email es falso

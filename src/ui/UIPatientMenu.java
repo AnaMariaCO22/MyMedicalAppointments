@@ -27,7 +27,7 @@ public class UIPatientMenu {
                     showAppontmentManu();
                     break;
                 case 2:
-                    UIMenu.showMenu();
+                    showPatientMyAppointments();
                     break;
                 case 0:
                     UIMenu.showMenu();
@@ -93,7 +93,7 @@ public class UIPatientMenu {
     }
 
     private static void showPatientMyAppointments(){
-        int response= o;
+        int response= 0;
         do {
             if (UIMenu.patientLogued.getAppointmentDoctors().size()==0){
                 System.out.println("Dont have appointments");
