@@ -2,8 +2,11 @@ import model.*;
 
 import java.util.Date;
 
+import static ui.UIMenu.showMenu;
+
 public class Main {
     public static void main(String[] args) {
+        showMenu();
         /*
         model.Doctor myDoctor = new model.Doctor();
         myDoctor.showName();
@@ -14,7 +17,7 @@ public class Main {
         model.Doctor myDoctorAna = new model.Doctor();
         myDoctor.showId();
         System.out.println(model.Doctor.id);
-        */
+
         //showMenu();
         Doctor myDoctor = new Doctor("Ana Maria", "Cardiologa");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
@@ -69,8 +72,8 @@ public class Main {
         System.out.println(paciente.getWeight());
 
         paciente.setPhoneNumber("46547809");
-        System.out.println(paciente.getPhoneNumber()); */
-
+        System.out.println(paciente.getPhoneNumber());
+ */
 
     }
 
